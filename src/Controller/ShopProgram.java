@@ -15,21 +15,16 @@ public class ShopProgram {
 
     public ShopProgram() throws IOException, SQLException {
         String custName;
-        String categoryName;
         String feedbackText;
-        int shopId;
         int max = Integer.MAX_VALUE;
         int feedbackRate;
-        Repository rep = new Repository();
         Control control = new Control();
-        Customer custObj = new Customer();
-        Product chosenProd = new Product();
-        List<Product> prodlist = new ArrayList<>();
-        List<Object> cartList = new ArrayList<>();
+        Customer custObj;
+        Product chosenProd;
+        List<Product> prodlist;
 
         custName = control.axsShop();
         custObj = control.getCustomerData(custName);
-
 
         if (control.checkCart(custObj.getId())) {
             System.out.println("\nHere's your cart "+ custName);

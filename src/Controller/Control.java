@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 public class Control {
     Repository rep = new Repository();
 
-
     public String axsShop() throws IOException {
         Scanner scan = new Scanner(System.in);
         Boolean axsConfirmed = false;
@@ -78,7 +77,6 @@ public class Control {
             }
         }
 
-
     public Product selectProduct(List<Product> list) {
         Scanner scan = new Scanner(System.in);
         Product prod = new Product();
@@ -104,6 +102,5 @@ public class Control {
     public void Shoooopaaaa(int customer, int shop, int product) throws IOException {
         rep.setCart(customer, shop, product);
     }
-
 }
 
