@@ -300,11 +300,11 @@ public class Repository {
                 p.getProperty("name"),
                 p.getProperty("password"));
             PreparedStatement stmt = con.prepareStatement(query)) {
-            stmt.executeUpdate(query);
             stmt.setInt(1, rate);
             stmt.setInt(2, model);
             stmt.setInt(3, customer);
             stmt.setString(4, comment);
+            stmt.execute();
         } catch (Exception e) {
             e.printStackTrace();
         }

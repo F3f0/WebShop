@@ -13,6 +13,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException, SQLException {
         ShopProgram shop = new ShopProgram();
-        //Test
+
     }
 }
